@@ -1,4 +1,4 @@
-<?page contentType="text/html;charset=UTF-8" id="pageIndex"?>
+<?page contentType="text/html;charset=UTF-8" id="pageIndex" title="Teste RN - Sistema JAVA"?>
 
 <?link href="css/ajusteszk.css" rel="stylesheet" type="text/css"?>
 <?link href="webjars/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" type="text/css"?>

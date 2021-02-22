@@ -10,20 +10,14 @@ public final class BancoConexao {
 
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 	
-	private static final String USUARIO = "system";
-	private static final String SENHA = "systemlog";
+	private static final String USUARIO = "user";
+	private static final String SENHA = "senha";
 	
 	public static final String NOME_BANCO_DADOS_PRINCIPAL = "O NOME DO SEU BANCO DE DADOS :D"; //TODO: alterar para o nome do banco de dados do projeto
-	public static final String NOME_BANCO_DADOS_GERAL = "rodartenogueira_novo";
-	
-	
-	
+	public static final String NOME_BANCO_DADOS_GERAL = "nome_bd";
 	
 	private BancoConexao() {
 	}
-	
-	
-	
 	
 	/**
 	 * Abre uma conexão com o banco de dados informado.
@@ -45,8 +39,6 @@ public final class BancoConexao {
 			throw new Exception("Problema ao realizar a conexão com o banco de dados. Erro: " +ex);
 		}
 	}
-	
-	
 	
 	/**
 	 * Fecha a {@linkplain Connection}, o {@linkplain ResultSet} e/ou o {@linkplain PreparedStatement}.
