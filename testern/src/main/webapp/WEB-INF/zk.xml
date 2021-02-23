@@ -7,11 +7,6 @@
 		<value>center,center</value>
 	</library-property>
 
-	<library-property>
-		<name>org.zkoss.zul.Menupopup.mold</name>
-		<value>bs</value>
-	</library-property>
-
 	<client-config>	
 		<data-handler>
 			<name>tooltip</name>

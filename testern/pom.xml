@@ -7,6 +7,13 @@
 	<properties>
 		<zk.version>8.5.0</zk.version>
 		<commons-io>2.4</commons-io>
+		<junit.version>4.12</junit.version>
+		<mysql.version>8.0.11</mysql.version>
+		<jquery.version>3.4.1</jquery.version>
+		<assertj.version>3.11.1</assertj.version>
+		<popper.version>1.15.0</popper.version>
+		<bootstrap.version>4.3.1</bootstrap.version>
+		<font-awesome.version>5.3.1</font-awesome.version>
 		<build.timestamp>${maven.build.timestamp}</build.timestamp>
 		<maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
@@ -72,63 +79,47 @@
 			<version>${commons-io}</version>
 		</dependency>
 		
-		<!-- 		BOOTSTRAP -->
+		<!-- BOOTSTRAP -->
 		<dependency>
-		    <groupId>org.webjars</groupId>
-		    <artifactId>bootstrap</artifactId>
-		    <version>3.3.7</version>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>${bootstrap.version}</version>
+		</dependency>
+		<!-- PopperJs -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>popper.js</artifactId>
+			<version>${popper.version}</version>
+		</dependency>
+
+		<!-- JQUERY -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>${jquery.version}</version>
 		</dependency>
 		
-		<!-- 		ZK BOOTSTRAP -->
-		<dependency>
-		  <groupId>org.zkoss.addons</groupId>
-		  <artifactId>zk-bootstrap</artifactId>
-		  <version>1.0.0</version>
-		  	<exclusions>
-			  	<exclusion>
-					<groupId>org.zkoss.zk</groupId>
-					<artifactId>zkex</artifactId>
-				</exclusion>
-	            <exclusion>
-					<groupId>org.zkoss.zk</groupId>
-					<artifactId>zkmax</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 		
-		<!-- 		JQUERY -->
-		<dependency>
-    		<groupId>org.webjars</groupId>
-		    <artifactId>jquery</artifactId>
-    		<version>3.3.1</version>
-		</dependency>
 		
 		<!-- 		FONT AWESOME -->
 		<dependency>
 		    <groupId>org.webjars</groupId>
 		    <artifactId>font-awesome</artifactId>
-		    <version>5.3.1</version>
-		</dependency>
-		
-		<!-- 		ANIMATE -->
-		<dependency>
-		    <groupId>org.webjars</groupId>
-		    <artifactId>animate.css</artifactId>
-		    <version>3.2.0</version>
+		    <version>${font-awesome.version}</version>
 		</dependency>
 		
 		<!-- 		MYSQL CONNECTOR -->
 		<dependency>
     		<groupId>mysql</groupId>
     		<artifactId>mysql-connector-java</artifactId>
-    		<version>8.0.11</version>
+    		<version>${mysql.version}</version>
 		</dependency>
 		
 		<!-- 		JUNIT 4 -->
 		<dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>
-		    <version>4.12</version>
+		    <version>${junit.version}</version>
 		    <scope>test</scope>
 		</dependency>
 		
@@ -136,7 +127,8 @@
 		<dependency>
 		  <groupId>org.assertj</groupId>
 		  <artifactId>assertj-core</artifactId>
-		  <version>3.11.1</version>
+		  <version>${assertj.version}</version>
+		  
 		  <scope>test</scope>
 		</dependency>
 		
