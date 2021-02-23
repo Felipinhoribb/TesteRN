@@ -1,7 +1,7 @@
 # Teste Rodarte Nogueira
 <p align="center">🚀 Sistema de manipulação de Excel e cálculo estatísticas básicas</p>
 
-## 💻 Requisitos para execução do projeto:
+## 💻 Requisitos mínimos para execução do projeto:
 - [x] Java
 - [x] Git
 - [x] MySql
@@ -13,9 +13,10 @@ Todo o desenvolvimento do projeto deverá ser feito em uma bifurcação do proje
 A solução deste teste deverá ser compartilhada pelo seu fork do repositório, não se esqueça de commitar suas alterações.
 
 Ao concluir o projeto ele deverá:
+
 - [x] Realizar a leitura e extração dos dados do arquivo Excel que pode ser encontrado no menu ‘Arquivos’;
 - [x] Armazenamento dos dados extraídos em base de dados;
-- [x] Exportação de relatório Excel contendo 3 abas, conforme descrito abaixo:
+	- [x] Exportação de relatório Excel contendo 3 abas, conforme descrito abaixo:
 	- [x]  1ª aba: relação de todos os participantes e as informações inseridas, ordenadas pelo nome em ordem alfabética.
 	- [x] 2ª aba: relação dos participantes, contendo o nome, a idade de cada um e a média das notas. Os participantes deverão ser ordenados pela idade crescente.
 	- [x] 3ª aba: uma tabela estatística contendo informações como: percentual geral de aprovados (considerando mínimo 70% para aprovação, e total de 100 pontos) e também segregado por sexo.
@@ -28,9 +29,9 @@ Ao concluir o projeto ele deverá:
 
 ## 🖼️ Exemplos de resultados
 
-<img src="exemplo_1.png" width="100px;" alt="Exemplo 1"/>
-<img src="exemplo_2.png" width="100px;" alt="Exemplo 2"/>
-<img src="exemplo_3.png" width="100px;" alt="Exemplo 3"/>
+<img src="resultados_exemplos\exemplo_1.png" width="100px;" alt="Exemplo 1"/>
+<img src="resultados_exemplos\exemplo_2.png" width="100px;" alt="Exemplo 2"/>
+<img src="resultados_exemplos\exemplo_3.png" width="100px;" alt="Exemplo 3"/>
 ---
 
 
