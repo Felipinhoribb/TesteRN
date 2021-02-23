@@ -29,9 +29,9 @@ Ao concluir o projeto ele deverá:
 
 ## 🖼️ Exemplos de resultados
 
-<img src="resultados_exemplos\exemplo_1.png" width="100px;" alt="Exemplo 1"/>
-<img src="resultados_exemplos\exemplo_2.png" width="100px;" alt="Exemplo 2"/>
-<img src="resultados_exemplos\exemplo_3.png" width="100px;" alt="Exemplo 3"/>
+<img src="resultados_exemplos/exemplo_1.png" width="100px;" alt="Exemplo 1"/>
+<img src="resultados_exemplos/exemplo_2.png" width="100px;" alt="Exemplo 2"/>
+<img src="resultados_exemplos/exemplo_3.png" width="100px;" alt="Exemplo 3"/>
 ---
 
 
