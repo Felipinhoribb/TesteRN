@@ -16,6 +16,7 @@
 		
 		<button visible="@load(vm.visibilidadeBotaoLerEProcessar)" class="success-button" label="Ler e Processar Arquivo" onClick="@command('lerArquivoEProcessar')"/>
 		<button visible="@load(not vm.visibilidadeBotaoLerEProcessar)" label="Exportar Resultados" class="fas fa-download" onClick="@command('exportarResultados')"/>
+		<button visible="@load(not vm.visibilidadeBotaoLerEProcessar)" label="Reiniciar Importação" class="fas fa-sync-alt warning-button" onClick="@command('resetarImportacao')"/>
 				
 	</div>
 </zk>

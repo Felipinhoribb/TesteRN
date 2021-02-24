@@ -85,6 +85,20 @@ public class VmPageInicio {
 		
 	}
 	
+	@Command
+	public void resetarImportacao() {
+		
+		arquivoTemporario = null;
+		
+		visibilidadeBotaoLerEProcessar = true;
+		
+		BindUtils.postNotifyChange(null, null, VmPageInicio.this, "visibilidadeBotaoLerEProcessar");
+		BindUtils.postNotifyChange(null, null, VmPageInicio.this, "nomeArquivo");
+		
+		Clients.showNotification("Atenção quanto aos dados que foram persistidos no banco!", Clients.NOTIFICATION_TYPE_WARNING, null, null, 3500, true);
+		
+	}
+	
 	public String getNomeArquivo() {
 		
 		return arquivoTemporario == null ? "" : arquivoTemporario.getName();
