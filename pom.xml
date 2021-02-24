@@ -9,10 +9,10 @@
 		<commons-io>2.4</commons-io>
 		<junit.version>4.12</junit.version>
 		<mysql.version>8.0.11</mysql.version>
-		<jquery.version>3.4.1</jquery.version>
+		<jquery.version>3.3.1</jquery.version>
 		<assertj.version>3.11.1</assertj.version>
 		<popper.version>1.15.0</popper.version>
-		<bootstrap.version>4.3.1</bootstrap.version>
+		<bootstrap.version>3.3.7</bootstrap.version>
 		<font-awesome.version>5.3.1</font-awesome.version>
 		<build.timestamp>${maven.build.timestamp}</build.timestamp>
 		<maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
