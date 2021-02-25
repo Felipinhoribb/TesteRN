@@ -10,10 +10,10 @@ public final class BancoConexao {
 
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 	
-	private static final String USUARIO = "user";
-	private static final String SENHA = "senha";
+	private static final String USUARIO = "root"; //user
+	private static final String SENHA = "admin@9751";  //password
 	
-	public static final String NOME_BANCO_DADOS_PRINCIPAL = "O NOME DO SEU BANCO DE DADOS :D"; //TODO: alterar para o nome do banco de dados do projeto
+	public static final String NOME_BANCO_DADOS_PRINCIPAL = "TesteRN"; //TODO: alterar para o nome do banco de dados do projeto
 	public static final String NOME_BANCO_DADOS_GERAL = "nome_bd";
 	
 	private BancoConexao() {

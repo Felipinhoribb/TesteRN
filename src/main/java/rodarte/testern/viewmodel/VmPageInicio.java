@@ -4,7 +4,18 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.sql.Date;
+import java.util.Iterator;
 
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.zkoss.bind.BindContext;
 import org.zkoss.bind.BindUtils;
 import org.zkoss.bind.annotation.Command;
@@ -15,6 +26,10 @@ import org.zkoss.zk.ui.event.UploadEvent;
 import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.Filedownload;
 import org.zkoss.zul.Messagebox;
+
+import Sheet.Import;
+import modelcliente.Cliente;
+
 
 public class VmPageInicio {
 
@@ -40,10 +55,10 @@ public class VmPageInicio {
 			
 			InputStream arquivo = arquivoTemporario.getStreamData();
 			
-			/** 
-			 * 
-			 * 
-			 */
+			Import imp = new Import();
+			
+			//Método resposável por fazer a importação da planilha
+			imp.importarPlanilha(arquivo);
 			
 			visibilidadeBotaoLerEProcessar = false;
 			
