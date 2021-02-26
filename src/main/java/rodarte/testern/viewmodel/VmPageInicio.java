@@ -1,10 +1,12 @@
 package rodarte.testern.viewmodel;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -27,6 +29,7 @@ import org.zkoss.zk.ui.util.Clients;
 import org.zkoss.zul.Filedownload;
 import org.zkoss.zul.Messagebox;
 
+import Sheet.Export;
 import Sheet.Import;
 import modelcliente.Cliente;
 
@@ -77,16 +80,22 @@ public class VmPageInicio {
 	@Command
 	public void exportarResultados() {
 		
+		/**
+		 * Exportação dos arquivos do banco de dados
+		 */
+		
 		try {
 			
 			File arquivo = new File("Resultados.xlsx").getCanonicalFile();
 			OutputStream out = new FileOutputStream(arquivo.getAbsolutePath());
 			
-			/**
-			 * 
-			 * 
-			 * 
-			 */
+			//Implementação da exportação do arquivo
+			Export exp = new Export();
+			exp.exportarClientesNome(out);
+			
+			exp.exportarClientesNotas(out);
+			
+            out.close();
 			
 			Filedownload.save(arquivo, ".xlsx");
 			
