@@ -168,7 +168,7 @@ public class Export {
 
 			// Recuperando a idade do Cliente
 			Cell cellIdade = row.createCell(cellnum++);
-			//cellIdade.setCellValue(cli.getDataNascimento().toLocalDate().getYear() - 2021);
+			cellIdade.setCellValue(cli.getDataNascimento().getDate());
 
 			Cell cellMediaNotas = row.createCell(cellnum++);
 			cellMediaNotas.setCellValue(cli.getNota1() + cli.getNota2() + cli.getNota3() / 3);
@@ -258,14 +258,14 @@ public class Export {
 		cellTitleMasculino.setCellValue("Percentual de Clientes Aprovados do Sexo Masculino");
 
 		Cell cellPercMasculino = row.createCell(cellnum++);
-		cellPercMasculino.setCellValue((totalAprovadosMasculino * 100) / totalClientes);
+		cellPercMasculino.setCellValue((totalAprovadosMasculino * 100) / totalClientes + "%");
 
 		// Relatório de clientes do sexo feminino
 		Cell cellTitleFeminino = row.createCell(cellnum++);
 		cellTitleFeminino.setCellValue("Percentual de Clientes do Sexo Feminino");
 
 		Cell cellPercFeminino = row.createCell(cellnum++);
-		cellPercFeminino.setCellValue((totalAprovadosFeminino * 100) / totalClientes);
+		cellPercFeminino.setCellValue((totalAprovadosFeminino * 100) / totalClientes + "%");
 
 		// Executa a escrita dos dados no arquivo
 		workbook.write(arquivoSaida);

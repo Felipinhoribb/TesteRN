@@ -91,13 +91,15 @@ public class VmPageInicio {
 			
 			//Implementação da exportação do arquivo
 			Export exp = new Export();
-			exp.exportarClientesNome(out);
+			//exp.exportarClientesNome(out);
 			
 			exp.exportarClientesNotas(out);
 			
-            out.close();
+			//exp.exportarClientesEstatisticas(out);
 			
 			Filedownload.save(arquivo, ".xlsx");
+			
+			out.close();
 			
 			Clients.showNotification("Arquivo exportado com sucesso!", Clients.NOTIFICATION_TYPE_INFO, null, null, 3500, true);
 			

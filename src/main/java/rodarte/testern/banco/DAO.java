@@ -69,13 +69,13 @@ public class DAO {
 			while (rs.next()) {
 
 				Cliente cli = new Cliente();
-				cli.setIdentificacao(rs.getLong(0));
-				cli.setNome(rs.getString(1));
-				cli.setSexo(rs.getString(rs.getString(2)));
-				cli.setDataNascimento(rs.getDate(3));
-				cli.setNota1(rs.getInt(4));
-				cli.setNota2(rs.getInt(5));
-				cli.setNota3(rs.getInt(6));
+				cli.setIdentificacao(rs.getLong(1));
+				cli.setNome(rs.getString(2));
+				cli.setSexo(rs.getString(3));
+				cli.setDataNascimento(rs.getDate(4));
+				cli.setNota1(rs.getInt(5));
+				cli.setNota2(rs.getInt(6));
+				cli.setNota3(rs.getInt(7));
 
 				listaClientes.add(cli);
 			}
@@ -111,13 +111,13 @@ public class DAO {
 
 				// Recuperação dos dados
 				Cliente cli = new Cliente();
-				cli.setIdentificacao(rs.getLong(0));
-				cli.setNome(rs.getString(1));
-				cli.setSexo(rs.getString(rs.getString(2)));
-				cli.setDataNascimento(rs.getDate(3));
-				cli.setNota1(rs.getInt(4));
-				cli.setNota2(rs.getInt(5));
-				cli.setNota3(rs.getInt(6));
+				cli.setIdentificacao(rs.getLong(1));
+				cli.setNome(rs.getString(2));
+				cli.setSexo(rs.getString(3));
+				cli.setDataNascimento(rs.getDate(4));
+				cli.setNota1(rs.getInt(5));
+				cli.setNota2(rs.getInt(6));
+				cli.setNota3(rs.getInt(7));
 
 				listaClientes.add(cli);
 			}
@@ -147,7 +147,7 @@ public class DAO {
 		try {
 
 			// Instrução do banco de dados obtendo os clientes por sexo masculino
-			String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'm';";
+			String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'M';";
 			pstm = conn.prepareStatement(sql);
 			rs = pstm.executeQuery();
 
@@ -155,13 +155,13 @@ public class DAO {
 
 				// Recuperação dos dados
 				Cliente cli = new Cliente();
-				cli.setIdentificacao(rs.getLong(0));
-				cli.setNome(rs.getString(1));
-				cli.setSexo(rs.getString(rs.getString(2)));
-				cli.setDataNascimento(rs.getDate(3));
-				cli.setNota1(rs.getInt(4));
-				cli.setNota2(rs.getInt(5));
-				cli.setNota3(rs.getInt(6));
+				cli.setIdentificacao(rs.getLong(1));
+				cli.setNome(rs.getString(2));
+				cli.setSexo(rs.getString(3));
+				cli.setDataNascimento(rs.getDate(4));
+				cli.setNota1(rs.getInt(5));
+				cli.setNota2(rs.getInt(6));
+				cli.setNota3(rs.getInt(7));
 
 				listaClientes.add(cli);
 			}
@@ -191,7 +191,7 @@ public class DAO {
 		try {
 
 			// Instrução do banco de dados obtendo os clientes por idade
-			String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'f';";
+			String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'F';";
 			pstm = conn.prepareStatement(sql);
 			rs = pstm.executeQuery();
 
@@ -199,13 +199,13 @@ public class DAO {
 
 				// Recuperação dos dados
 				Cliente cli = new Cliente();
-				cli.setIdentificacao(rs.getLong(0));
-				cli.setNome(rs.getString(1));
-				cli.setSexo(rs.getString(rs.getString(2)));
-				cli.setDataNascimento(rs.getDate(3));
-				cli.setNota1(rs.getInt(4));
-				cli.setNota2(rs.getInt(5));
-				cli.setNota3(rs.getInt(6));
+				cli.setIdentificacao(rs.getLong(1));
+				cli.setNome(rs.getString(2));
+				cli.setSexo(rs.getString(3));
+				cli.setDataNascimento(rs.getDate(4));
+				cli.setNota1(rs.getInt(5));
+				cli.setNota2(rs.getInt(6));
+				cli.setNota3(rs.getInt(7));
 
 				listaClientes.add(cli);
 			}
