@@ -168,7 +168,7 @@ public class Export {
 
 			// Recuperando a idade do Cliente
 			Cell cellIdade = row.createCell(cellnum++);
-			cellIdade.setCellValue(cli.getDataNascimento().toLocalDate().getYear() - 2021);
+			//cellIdade.setCellValue(cli.getDataNascimento().toLocalDate().getYear() - 2021);
 
 			Cell cellMediaNotas = row.createCell(cellnum++);
 			cellMediaNotas.setCellValue(cli.getNota1() + cli.getNota2() + cli.getNota3() / 3);

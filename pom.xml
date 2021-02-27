@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>rodarte</groupId>
 	<artifactId>testern</artifactId>
@@ -18,8 +20,8 @@
 		<maven.build.timestamp.format>dd/MM/yyyy</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    	<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-    	<project.resources.sourceEncoding>${project.build.sourceEncoding}</project.resources.sourceEncoding>
+		<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+		<project.resources.sourceEncoding>${project.build.sourceEncoding}</project.resources.sourceEncoding>
 	</properties>
 	<packaging>war</packaging>
 	<name>Teste RN</name>
@@ -39,7 +41,7 @@
 		</repository>
 		<repository>
 			<id>ZK EVAL</id>
-      		<name>ZK Evaluation Repository</name>
+			<name>ZK Evaluation Repository</name>
 			<url>http://mavensync.zkoss.org/eval</url>
 		</repository>
 	</repositories>
@@ -51,8 +53,8 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<dependencies>
-	
-		<!-- 		ZK -->
+
+		<!-- ZK -->
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkbind</artifactId>
@@ -78,7 +80,7 @@
 			<artifactId>commons-io</artifactId>
 			<version>${commons-io}</version>
 		</dependency>
-		
+
 		<!-- BOOTSTRAP -->
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -98,44 +100,60 @@
 			<artifactId>jquery</artifactId>
 			<version>${jquery.version}</version>
 		</dependency>
-		
+
+		<!-- Dependências Adicionadas para configuração -->
 		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi</artifactId>
-		    <version>4.1.0</version>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.0</version>
 		</dependency>
-		
-		<!-- 		FONT AWESOME -->
+
+		<!-- POI -->
 		<dependency>
-		    <groupId>org.webjars</groupId>
-		    <artifactId>font-awesome</artifactId>
-		    <version>${font-awesome.version}</version>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.0</version>
 		</dependency>
-		
-		<!-- 		MYSQL CONNECTOR -->
+
 		<dependency>
-    		<groupId>mysql</groupId>
-    		<artifactId>mysql-connector-java</artifactId>
-    		<version>${mysql.version}</version>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>4.1.0</version>
 		</dependency>
-		
-		<!-- 		JUNIT 4 -->
+		<!-- POI -->
+		<!-- Dependências Adicionadas para configuração Até aqui -->
+
+		<!-- FONT AWESOME -->
 		<dependency>
-		    <groupId>junit</groupId>
-		    <artifactId>junit</artifactId>
-		    <version>${junit.version}</version>
-		    <scope>test</scope>
+			<groupId>org.webjars</groupId>
+			<artifactId>font-awesome</artifactId>
+			<version>${font-awesome.version}</version>
 		</dependency>
-		
-		<!-- 		ASSERTJ -->
+
+		<!-- MYSQL CONNECTOR -->
 		<dependency>
-		  <groupId>org.assertj</groupId>
-		  <artifactId>assertj-core</artifactId>
-		  <version>${assertj.version}</version>
-		  
-		  <scope>test</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
-		
+
+		<!-- JUNIT 4 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- ASSERTJ -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assertj.version}</version>
+
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
@@ -191,16 +209,16 @@
 				</executions>
 			</plugin>
 			<plugin>
-		    	<groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-archetype-plugin</artifactId>
-		        <version>3.1.1</version>
-		    </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>3.1.1</version>
+			</plugin>
 		</plugins>
 		<resources>
-		   <resource>
-		      <directory>src/main/resources</directory>
-		      <filtering>true</filtering>
-		   </resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
 		</resources>
 	</build>
 </project>

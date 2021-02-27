@@ -15,7 +15,7 @@ public class DAO {
 		// TODO Auto-generated constructor stub
 	}
 
-	// Método para salvar os clientes no db (database)
+	// Método para salvar os clientes no banco de dados
 	public void salvarCliente(Cliente cli) throws Exception {
 
 		// Abertura de conexão com o banco
@@ -31,7 +31,7 @@ public class DAO {
 			pstm.setLong(1, cli.getIdentificacao());
 			pstm.setString(2, cli.getNome());
 			pstm.setString(3, cli.getSexo());
-			pstm.setDate(4, cli.getDataNascimento());
+			pstm.setDate(4, new java.sql.Date(cli.getDataNascimento().getTime()));
 			pstm.setInt(5, cli.getNota1());
 			pstm.setInt(6, cli.getNota2());
 			pstm.setInt(7, cli.getNota3());
@@ -49,7 +49,7 @@ public class DAO {
 
 	}
 
-	// Método para listar os clientes por nome do db (database)
+	// Método que busca os clientes pelo nome no banco de dados
 	public List<Cliente> listarNome() throws Exception {
 
 		// Lista para armazenar os dados do db
@@ -89,7 +89,7 @@ public class DAO {
 		return listaClientes;
 	}
 
-	// Método para listar os clientes por nome do db (database)
+	// Método que busca os clientes por idade no banco de dados
 	public List<Cliente> listarIdade() throws Exception {
 
 		// Lista para armazenar os dados do db (database)
@@ -132,93 +132,93 @@ public class DAO {
 
 		return listaClientes;
 	}
-	
-	// Método para listar os clientes por nome do db (database)
-		public List<Cliente> listarMasculino() throws Exception {
 
-			// Lista para armazenar os dados dos clientes masculinos
-			List<Cliente> listaClientes = new ArrayList<Cliente>();
+	// Método que busca os clientes do sexo masculino no banco de dados
+	public List<Cliente> listarMasculino() throws Exception {
 
-			// Abertura de conexão com o banco
-			Connection conn = BancoConexao.abrir(BancoConexao.NOME_BANCO_DADOS_PRINCIPAL);
-			PreparedStatement pstm = null;
-			ResultSet rs = null;
+		// Lista para armazenar os dados dos clientes masculinos
+		List<Cliente> listaClientes = new ArrayList<Cliente>();
 
-			try {
+		// Abertura de conexão com o banco
+		Connection conn = BancoConexao.abrir(BancoConexao.NOME_BANCO_DADOS_PRINCIPAL);
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
 
-				// Instrução do banco de dados obtendo os clientes por sexo masculino
-				String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'm';";
-				pstm = conn.prepareStatement(sql);
-				rs = pstm.executeQuery();
+		try {
 
-				while (rs.next()) {
+			// Instrução do banco de dados obtendo os clientes por sexo masculino
+			String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'm';";
+			pstm = conn.prepareStatement(sql);
+			rs = pstm.executeQuery();
 
-					// Recuperação dos dados
-					Cliente cli = new Cliente();
-					cli.setIdentificacao(rs.getLong(0));
-					cli.setNome(rs.getString(1));
-					cli.setSexo(rs.getString(rs.getString(2)));
-					cli.setDataNascimento(rs.getDate(3));
-					cli.setNota1(rs.getInt(4));
-					cli.setNota2(rs.getInt(5));
-					cli.setNota3(rs.getInt(6));
+			while (rs.next()) {
 
-					listaClientes.add(cli);
-				}
+				// Recuperação dos dados
+				Cliente cli = new Cliente();
+				cli.setIdentificacao(rs.getLong(0));
+				cli.setNome(rs.getString(1));
+				cli.setSexo(rs.getString(rs.getString(2)));
+				cli.setDataNascimento(rs.getDate(3));
+				cli.setNota1(rs.getInt(4));
+				cli.setNota2(rs.getInt(5));
+				cli.setNota3(rs.getInt(6));
 
-			} catch (Exception ex) {
-				// Em caso de erro
-				System.out.println("Erro ao listar cliente do sexo masculino: " + ex);
-			} finally {
-				// Incerramento do banco de dados
-				BancoConexao.fechar(conn, pstm, rs);
+				listaClientes.add(cli);
 			}
 
-			return listaClientes;
+		} catch (Exception ex) {
+			// Em caso de erro
+			System.out.println("Erro ao listar cliente do sexo masculino: " + ex);
+		} finally {
+			// Incerramento do banco de dados
+			BancoConexao.fechar(conn, pstm, rs);
 		}
-		
-		// Método para listar os clientes por nome do db (database)
-		public List<Cliente> listarFeminino() throws Exception {
 
-			// Lista para armazenar os dados do db (database)
-			List<Cliente> listaClientes = new ArrayList<Cliente>();
+		return listaClientes;
+	}
 
-			// Abertura de conexão com o banco
-			Connection conn = BancoConexao.abrir(BancoConexao.NOME_BANCO_DADOS_PRINCIPAL);
-			PreparedStatement pstm = null;
-			ResultSet rs = null;
+	// Método que busca os clientes do sexo feminino no banco de dados
+	public List<Cliente> listarFeminino() throws Exception {
 
-			try {
+		// Lista para armazenar os dados do db (database)
+		List<Cliente> listaClientes = new ArrayList<Cliente>();
 
-				// Instrução do banco de dados obtendo os clientes por idade
-				String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'f';";
-				pstm = conn.prepareStatement(sql);
-				rs = pstm.executeQuery();
+		// Abertura de conexão com o banco
+		Connection conn = BancoConexao.abrir(BancoConexao.NOME_BANCO_DADOS_PRINCIPAL);
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
 
-				while (rs.next()) {
+		try {
 
-					// Recuperação dos dados
-					Cliente cli = new Cliente();
-					cli.setIdentificacao(rs.getLong(0));
-					cli.setNome(rs.getString(1));
-					cli.setSexo(rs.getString(rs.getString(2)));
-					cli.setDataNascimento(rs.getDate(3));
-					cli.setNota1(rs.getInt(4));
-					cli.setNota2(rs.getInt(5));
-					cli.setNota3(rs.getInt(6));
+			// Instrução do banco de dados obtendo os clientes por idade
+			String sql = "SELECT * FROM Cliente WHERE Cliente.sexo = 'f';";
+			pstm = conn.prepareStatement(sql);
+			rs = pstm.executeQuery();
 
-					listaClientes.add(cli);
-				}
+			while (rs.next()) {
 
-			} catch (Exception ex) {
-				// Em caso de erro
-				System.out.println("Erro ao listar cliente por sexo feminino: " + ex);
-			} finally {
-				// Incerramento do banco de dados
-				BancoConexao.fechar(conn, pstm, rs);
+				// Recuperação dos dados
+				Cliente cli = new Cliente();
+				cli.setIdentificacao(rs.getLong(0));
+				cli.setNome(rs.getString(1));
+				cli.setSexo(rs.getString(rs.getString(2)));
+				cli.setDataNascimento(rs.getDate(3));
+				cli.setNota1(rs.getInt(4));
+				cli.setNota2(rs.getInt(5));
+				cli.setNota3(rs.getInt(6));
+
+				listaClientes.add(cli);
 			}
 
-			return listaClientes;
+		} catch (Exception ex) {
+			// Em caso de erro
+			System.out.println("Erro ao listar cliente por sexo feminino: " + ex);
+		} finally {
+			// Incerramento do banco de dados
+			BancoConexao.fechar(conn, pstm, rs);
 		}
-	
+
+		return listaClientes;
+	}
+
 }

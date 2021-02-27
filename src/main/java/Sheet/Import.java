@@ -79,7 +79,7 @@ public class Import {
 
 					break;
 				case 3:
-					objCli.setDataNascimento((Date) cell.getDateCellValue());
+					objCli.setDataNascimento((Date)cell.getDateCellValue());
 
 					break;
 				case 4:
