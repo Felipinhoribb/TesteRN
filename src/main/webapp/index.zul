@@ -60,12 +60,18 @@
 						</a>
 					</n:li>
 				</n:ul>
+				<n:ul class="nav nav-pills nav-stacked">
+					<n:li role="presentation">
+						<a href="" onClick="@command('abrirTelaRelatorio')">
+							<span sclass="fas fa-copy"/> <space/><label value="Relatórios"/>
+						</a>
+					</n:li>
+				</n:ul>
 			</vlayout>
 		</west>
 				
 		<center style="overflow-y: auto">
 			<borderlayout>
-				
 				<center style="overflow-y: auto">
 					<include src="pageInicio.zul"/>
 				</center>

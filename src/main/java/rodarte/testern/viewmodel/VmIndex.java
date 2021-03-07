@@ -16,6 +16,16 @@ public class VmIndex {
 		
 	}
 	
+	@Command
+	public void abrirTelaRelatorio() throws Exception {
+		
+		Executions.createComponents("pageRelatorio.zul", null, null);
+		
+		VmRelatorio objRel = new VmRelatorio();
+		objRel.verificaImport();
+		
+	}
+	
 	public ModeloInformacoesProjeto getInformacoesDoProjeto() {
 		
 		return this.informacoesDoProjeto;
