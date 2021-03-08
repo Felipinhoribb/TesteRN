@@ -10,14 +10,17 @@ import rodarte.testern.banco.DAO;
 public class VmRelatorio {
 
 	private List<Cliente> listaClientes;
-
-	public List<Cliente> getListaClientes() throws Exception {
-
+	
+	public VmRelatorio() throws Exception {
 		DAO objDao = new DAO();
-
 		listaClientes = objDao.listarNome();
-		
-		//System.out.println(listaClientes);
+	}
+
+	/*
+	 * Métodos get e set que recuperam os dados da lista de clientes
+	 */
+	
+	public List<Cliente> getListaClientes() throws Exception {
 
 		return listaClientes;
 	}
@@ -26,10 +29,15 @@ public class VmRelatorio {
 		this.listaClientes = listaClientes;
 	}
 
-	public void verificaImport() throws Exception {
+	//Verifica se há dados importados
+	public boolean verificaImport() {
 
-		if (listaClientes.size() == 0) {
-			Messagebox.show("Aviso", "Não há dados armazenados na base de dados!", Messagebox.OK, Messagebox.ERROR);
+		boolean value = false;
+		
+		if (listaClientes.size() != 0) {
+			return true;
 		}
+		
+		return value;
 	}
 }
